@@ -20,7 +20,5 @@ spec:
               name: story-volume
       volumes:
         - name: story-volume
-          # emptyDir: {} # {} is an empty object, no specific configuration
-          hostPath:
-            path: /data
-            type: DirectoryOrCreate
+          persistentVolumeClaim:
+            claimName: host-pvc

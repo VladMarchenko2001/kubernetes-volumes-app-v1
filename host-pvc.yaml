@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: host-pvc
+spec:
+  volumeName: host-pv # Static Provisioning. Can claim by resource i.e. -> Dynamic Provisioning
+  accessModes:
+    - ReadWriteOnce # accessible by only single node' many pods
+  storageClassName: standard
+  resources:
+    requests:
+      storage: 1Gi # this is the capacity.storage of the host-pv
