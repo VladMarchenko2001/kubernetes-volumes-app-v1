@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-vars
+data:
+  storyFolder: story
+  #...
+#to list: kubectl get configmap
